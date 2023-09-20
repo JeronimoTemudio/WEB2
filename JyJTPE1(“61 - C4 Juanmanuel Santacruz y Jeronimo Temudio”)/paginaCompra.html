@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>J y J Autopartes</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/1dfba8ce1c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a class="link-logo" href="index.html"><img src="img/logojj.jpg" alt=""></a></div>
+            <div class="buscador">
+                <form>
+                    <input class="src" type="text" name="search" placeholder="MOTORES..." autocomplete="off" autofocus required>
+                </form>
+            </div>
+            <nav class="nav">
+                <ul class="ul-nav">
+                    <li class="listas-nav"><a class="links-nav" href="index.html">Inicio</a></li>
+                    <li class="listas-nav"><a class="links-nav" href="repuestosAutos.html">Respuestos Autos</a></li>
+                    <li class="listas-nav"><a class="links-nav" href="repuestosMotos.html">Respuestos Moto</a></li>
+                    <li class="listas-nav"><a class="links-nav" href="paginaCompra.html">Carrito</a></li>
+                </ul>
+            </nav> 
+            <div id="btn-nav"> <img class="img-btn" src="img/icono-menu.jpg" alt=""></div>
+        </header>
+        <main>
+            <div class="contenedor-captcha">  
+                <h2 class="h2-captcha">Inicie sesion completando el captcha para entrar a su carrito</h2>
+                <form action="" class="form-contactanos">
+                    <div class="datos-usuario"> 
+                        <input type="text" id="nombre-usuario" placeholder="Ingrese su nombre" >  
+                        <input type="text" id="apellido-usuario" placeholder="Ingrese su apellido">
+                        <input type="mail" id="email-usuario" placeholder="Ingrese su direcccion email ">
+                        <button type="button" id="genera-num-captcha">Generar numero</button>
+                    </div>
+                    <div class="datos-usuario">
+                        <p id="parrafo-captcha">numero del captcha</p>
+                        <input type="text" placeholder="Ingrese el numero del captcha" id="numero-del-usuario">
+                        <button type="button" id="validar-captcha">Enviar numero para validar</button>
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="contenedor-form">
+               <div class="div-h2-form"><h2 id="h2-form"> Bienvenido al carrito: <span id="parrafo-bienvenido"></span></h2></div> 
+               <p id="parrafo-incompleto"></p>
+                <section class="formulario-tabla-compra">
+                    <div class="formulario-compra"> 
+                        <div class="div-inputs-form"> 
+                            <input type="text"  id="input-producto" placeholder="Producto...">
+                            <input type="number"  id="input-cantidad" placeholder="Cantidad...">
+                            <input type="number"  id="input-precio" placeholder="Precios">
+                        </div>
+                        <div class="div-botonera-form">
+                            <button id="btn-cargar1">Cargar al carrito</button>
+                            <button id="btn-cargar2">Cargar 2 </button>
+                            <button id="btn-cargar3">Cargar 3 </button>
+                            <button id="btn-borrar-ultimo"> Borrar</button>
+                            <button id="btn-vaciar">Vaciar todo</button>
+                            
+                        </div>
+                    </div>
+                    <div class=tabla-fom>
+                    <table id="table-form">  
+                        <thead>
+                            <tr id="thead-form">
+                                <th class="thead-form">Producto</th>
+                                <th class="thead-form">Cantidad</th>
+                                <th class="thead-form">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+    
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+        </main>
+        <script src="formulario.js"></script>
+        <script src="captcha.js"></script>
+        <footer>
+            <p class="parrafo-footer">Siguenos en nuestras redes sociales: <a href="https://instagram.com/fcex_unicen?igshid=MzRlODBiNWFlZA==">"Instagram" </a> <a href="https://www.facebook.com/"> "Facebook"</a></p>
+        </footer>
+        <script src="resposive.js"></script>
+    </body>
+</html>
