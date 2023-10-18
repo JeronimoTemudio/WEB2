@@ -1,0 +1,16 @@
+<?php
+require 'templates/head.phtml';
+require 'templates/header.phtml';
+?> 
+
+<h2 class="h2-categorias">Ingresar Nueva categoria</h2>       
+    <form action="editarCategoria" method="POST">
+            <label for="categoria" class="label-form">Categoria a cambiar</label>
+            <input type="text" name="categoria" class="input-field" value="<?php echo $categoria; ?>" readonly>
+
+            <label for="nuevaCategoria" class="label-form">Nueva categoria</label>
+            <input type="text" name="nuevaCategoria" class="input-field" placeholder="Nueva...">
+            <button type="submit" class="btn-form">Guardar los cambios</button>
+        </form>   
+    <?php
+    

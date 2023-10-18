@@ -1,0 +1,27 @@
+<?php //.phtml por que tiene mas html que php
+require 'templates/head.phtml';
+require 'templates/header.phtml';
+
+?>
+<body class="body-usuarios">
+<div class="contenedor-form-categorias">
+      <h2 class="h2-categorias">Categorias</h2>
+         <?php foreach($categorias as $categoria){?>
+            <div class="div-foreach-categorias">
+               <a class="btn-form"href="categoria/<?php echo $categoria->categoria?>"><?php echo $categoria->categoria?></a>
+            </div>
+          <?php }?>
+  </div> 
+  <div clas="div-muestra-produtos">
+     <ul class="ul-muestra-productos">
+       <?php foreach($productos as $producto){?>  
+            <li class="lista-muesta-productos-item">     
+                 <h2 class="h3-muestra-productos"> <?php echo $producto->producto?></h2>
+                 <h3 class="h3-muestra-productos"><?php echo $producto->precio?>$</h3>
+                 <a class="link-muestra-detalle" href="detalle/<?php echo $producto->id_producto?>">Detalles del producto</a>
+               </li>
+           <?php } ?>   
+      </ul>
+        </div>
+    </body>             
+   

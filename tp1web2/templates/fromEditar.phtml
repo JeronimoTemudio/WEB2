@@ -1,0 +1,22 @@
+<?php
+//.phtml por que tiene mas html que php
+require 'templates/head.phtml';
+require 'templates/header.phtml';
+?> 
+
+<h2 class="h2-edit">Editar Producto</h2>
+    <?php foreach($modificar as $mod){?>
+    <form action="yaEditado/<?php echo $mod->id_producto ?>" method="POST" class="form-edit-producto">
+            <label for="nuevoProducto" class="label-edit-producto">Nuevo producto</label>
+            <input type="text" name="nuevoProducto" value="<?php echo $mod->producto; ?>" class="input-edit-producto">
+
+            <label for="nuevoPrecio" class="label-edit-producto">Nuevo precio</label>
+            <input type="text" name="nuevoPrecio" value="<?php echo $mod->precio; ?>" class="input-edit-producto">
+
+            <label for="nuevaDescripcion" class="label-edit-producto">Nueva descripcion</label>
+            <input type="text" name="nuevaDescripcion" value="<?php echo $mod->descripcion; ?>" class="input-edit-producto">
+
+            <button type="submit" class="btn-edit-producto">Guardar los cambios</button>
+        </form>   
+    <?php
+    }?>

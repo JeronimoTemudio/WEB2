@@ -1,0 +1,54 @@
+<?php
+require 'templates/head.phtml';
+require 'templates/header.phtml';
+
+?>
+<body class="body-usuarios">
+   <div class="contenedor-form-categorias">
+      <h2 class="h2-categorias">Categorias</h2>
+         <?php foreach($categorias as $categoria){?>
+            <div class="div-foreach-categorias">
+               <a class="btn-form"href="categoria/<?php echo $categoria->categoria?>"><?php echo $categoria->categoria?></a>
+               <a class="link-eliminar-categorias"href="mostrarEditarCategoria/<?php echo $categoria->categoria?>">Editar categoria</a>
+               <a class="link-eliminar-categorias"href="eliminarCategoria/<?php echo $categoria->categoria?>">Eliminar categoria</a> 
+            </div>
+          <?php }?>
+         <a href="agregarCategoria/" class="link-aniadir-categorias">Añadir una categoria</a>
+  </div> 
+   <div clas="div-muestra-produtos">
+     <ul class="ul-muestra-productos">
+       <?php foreach($productos as $producto){?>  
+            <li class="lista-muesta-productos-item">     
+                 <h2 class="h3-muestra-productos"> <?php echo $producto->producto?></h2>
+                 <h3 class="h3-muestra-productos"><?php echo $producto->precio?>$</h3>
+                 <a class="link-muestra-detalle" href="detalle/<?php echo $producto->id_producto?>">Detalles del producto</a>
+                 <a class="link-editar"href="editar/<?php echo $producto->id_producto?>">Editar producto</a>
+                 <a class="link-eliminar"href="eliminar/<?php echo $producto->id_producto?>">Eliminar producto</a>
+               </li>
+           <?php } ?>   
+      </ul>
+        </div>          
+       <form action="agregar" method="POST" class="form">  <!-- Form para la accion agregar, viene via _POST -->
+            <div class="form-group">
+               <label for="producto" class="label-form">Producto</label>
+               <input id="producto" name="producto" type="text" class="input-field">
+            </div>
+            <div class="form-group">
+               <label for="descripcion" class="label-form">Descripcion</label>
+               <input  id="descripcion" name="descripcion" type="text" class="input-field">
+            </div>
+         <div class="form-group">
+            <label for="precio" class="label-form">Precio</label>
+            <input id="precio" type="number" name="precio" placeholder="Precio del producto" class="input-field">
+         </div>
+         <button type="submit" class="submit-btn">Guardar</button>
+         <label for="">Categoria del producto</label>
+         <select name="categoria";>
+          <?php foreach($categorias as $categoria){?> 
+            <option value="<?php echo $categoria->categoria?>"><?php echo $categoria->categoria?></option>
+         <?php }?>  
+         </select>
+   </form> 
+</body>            
+   
+

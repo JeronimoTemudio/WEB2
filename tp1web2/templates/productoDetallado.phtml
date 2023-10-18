@@ -1,0 +1,20 @@
+<?php 
+    require_once 'templates/head.phtml';
+    require_once 'templates/header.phtml';
+
+?>
+<body>
+    <div class="contenedor-central">
+       <?php foreach($productos as $producto){?> 
+        <div class="contenedores-chicos"><img class="img-detallado" src="img/imagen<?php echo $producto->id_producto?>.jpg" alt="">
+            <li class="li-producto-detallado">     
+                 <h2 class="productos-detallado"> <?php echo $producto->producto?></h2>
+                  <p class="productos-detallado"><?php echo $producto->descripcion ?>
+                 <h2 class="productos-detallado"><?php echo $producto->precio?>$</h3>
+                 <h2 class="productos-detallado"><?php foreach($categoria as $categoria){ echo $categoria->categoria?><?php };?>   </h3>
+          </li>
+           <?php } ?>
+           <a class="volver-detallado" href="home/>">volver</a>
+        </div>
+    </div>
+</body>

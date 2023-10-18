@@ -1,0 +1,28 @@
+<?php require 'templates/header.phtml';
+      require 'templates/head.phtml';
+?>
+
+
+<div class="contenedor-login">
+    <form method="POST" action="auth">
+        <div class="login-mediano">
+            <label for="nombre">Nombre de usuario</label>
+            <input type="text" required class="input-login" id="nombre" name="nombre" aria-describedby="emailHelp">
+        </div>
+        <div class="login-mediano">
+            <label for="password">Password</label>
+            <input type="password" required class="input-login" id="password" name="password">
+        </div>
+
+        <?php if ($error) : ?>
+            <div class='alert alert-danger' role='alert'>
+                <?= $error ?>
+            </div> 
+        <?php endif ?>
+       
+        <button type="submit" class="btn-login">Entrar</button>
+    </form>
+</div>
+
+
+    
